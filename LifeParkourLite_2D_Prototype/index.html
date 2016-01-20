@@ -1,34 +1,107 @@
-<!doctype html>
-<html lang="en-us">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Life Parkour 2D Prototype</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
-  </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>Life Parkour 2D Prototype</p>
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="720px" width="1280px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Life Parkour 2D Prototype</div>
-    </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-    <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    dataUrl: "Release/LifeParkour2DPrototype_WebGL.data",
-    codeUrl: "Release/LifeParkour2DPrototype_WebGL.js",
-    memUrl: "Release/LifeParkour2DPrototype_WebGL.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
+    <meta  content="text/html; charset=UTF-8"  http-equiv="content-type">
+    <title>Life Parkour Lite 2D Prototype</title>
+    <style  type="text/css">
+body,td,th {
+	color: #000;
+	text-align:center;
+}
+body {
+	background-color: #fff;
+}
+.menu li {list-style-type: none; margin-bottom:6px;}
 
-  </body>
+.menuButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #1e5724;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #1e5724;
+	box-shadow:inset 0px 1px 0px 0px #1e5724;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #18453b), color-stop(1, #11332b));
+	background:-moz-linear-gradient(top, #18453b 5%, #11332b 100%);
+	background:-webkit-linear-gradient(top, #18453b 5%, #11332b 100%);
+	background:-o-linear-gradient(top, #18453b 5%, #11332b 100%);
+	background:-ms-linear-gradient(top, #18453b 5%, #11332b 100%);
+	background:linear-gradient(to bottom, #18453b 5%, #11332b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#18453b', endColorstr='#11332b',GradientType=0);
+	background-color:#18453b;
+	border:1px solid #18451d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	width:25%;
+}
+.menuButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #11332b), color-stop(1, #18453b));
+	background:-moz-linear-gradient(top, #11332b 5%, #18453b 100%);
+	background:-webkit-linear-gradient(top, #11332b 5%, #18453b 100%);
+	background:-o-linear-gradient(top, #11332b 5%, #18453b 100%);
+	background:-ms-linear-gradient(top, #11332b 5%, #18453b 100%);
+	background:linear-gradient(to bottom, #11332b 5%, #18453b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#11332b', endColorstr='#18453b',GradientType=0);
+	background-color:#11332b;
+}
+.menuButton:active {
+	position:relative;
+	top:1px;
+}
+.modifications {
+	display: inline-block
+}
+.modifications li {
+	text-align: left;
+}
+.image-border {
+  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff, 0px 0px 0px 15px #18453B;
+  margin: 5px;
+}
+.style1 {font-family: Arial, Helvetica, sans-serif}
+    </style> </head>
+  <body>
+    <h1 class="style1"><img src="logo-ss_small.png" alt="Life Parkour Lite 2D Prototype" width="210" height="150"></h1>
+    <h1 class="style1">Life Parkour Lite 2D Prototype</h1>
+  <p>Created by Marek Zielinski and Agnieszka Hrencznuk</p>
+    <img  src="SplashScreen_714x402.png"  alt="" class="image-border"  height="402"  width="714">
+<ul  class="menu">
+      <li><a  href="WebPlayer/WebPlayer.html" class="menuButton">Play Online <br>
+          (Unity3D plug-in required)<br>Errors with missing player image</a></li>
+      <li><a  href="WebGL.html" class="menuButton">Play Online <br>
+          (WebGL browser support required)</a></li>
+	<li><a  href="LifeParkourLite_2D_Prototype_Windows_x64.zip" class="menuButton">Download
+          Windows 64-bit Version</a></li>
+		  	<li><a  href="LifeParkourLite_2D_Prototype_Windows_x86.zip" class="menuButton">Download
+          Windows 32-bit Version</a></li>
+      <li><a  href="LifeParkourLite_2D_Prototype_Mac_x86.zip" class="menuButton">Download Mac
+          Version</a></li>
+		        <li><a  href="LifeParkourLite_2D_Prototype_Linux_x86.zip" class="menuButton">Download Linux
+          Version</a></li>
+
+      <!--
+      <li><a  href="http://itunes.com/apps/APPNAME" class="menuButton">Download iOS Version</a></li>
+      <li><a  href="https://play.google.com/store/apps/details?id=APPBUNDLEID" class="menuButton">Download Android Version</a></li>
+      -->
+    </ul>
+    <div  class="modifications">
+      <p>Run and get RESPECT!</p>
+  </div>
+    <br>
+    <div  class="modifications">
+      <p>Game Modifications:</p>
+      <ol>
+        <li>Modification 1. Changed graphics</li>
+        <li>Modification 2. Added mix of 2D and 3D elements</li>
+        <li>Modification 3. Added Camera effects (e.g. Zooming on events, velocity smoothing etc.)</li>
+        <li>Modification 4. Changed gameplay</li>
+		<li>Modification 5. Added tutorial</li>
+		<li>Modification 6. Added statistics</li>
+		<li>Modification 7. Whatever... it's a completely different game right now.</li>
+      </ol>
+    </div>
+    <p>© 2016  <img src="Mortar Game Labs logo ss small.png" alt="Mortar Game Labs" width="35" height="35">Mortar Game Labs. All Rights Reserved. </p>
+</body>
 </html>
